@@ -60,6 +60,15 @@ public class LinkedList {
 		prev_node.next = new_node;
 	}
 
+	public void deleteFirst() {
+		if (head == null) {
+			System.out.println("List is empty");
+		}
+		Node temp = head;
+		head = head.next;
+		temp.next = null;
+	}
+
 	void printList() {
 		Node currNode = head;
 		System.out.println("LinkedList: ");
@@ -78,6 +87,10 @@ public class LinkedList {
 		object.append(70);
 
 		object.appendAfter(object.head, 30);
+
+		object.printList();
+
+		object.deleteFirst();
 
 		object.printList();
 	}
