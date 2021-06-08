@@ -140,5 +140,8 @@ public class LinkedList {
 		System.out.println("\nEnter the element to search: ");
 		int node = scanner.nextInt();
 		object.searchNode(node);
+		object.appendAfter(object.head.next, 40);
+		System.out.println("\nAfter appending an element after the element next to head,");
+		object.printList();
 	}
 }
